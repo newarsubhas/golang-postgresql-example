@@ -269,7 +269,7 @@ func (a Account) updateInDB(id int64) error {
 
 // getDetailsFromDB will list all the accounts present in DB
 func (a Account) getDetailsFromDB() ([]Account, error) {
-
+	// ac is used to store the account details
 	var ac = []Account{}
 
 	rows, err := db.Query("SELECT * FROM accounts_db")
